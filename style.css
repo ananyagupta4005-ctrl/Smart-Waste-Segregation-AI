@@ -39,3 +39,35 @@ cursor:pointer;
 button:hover{
 background:#e63946;
 }
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:linear-gradient(90deg,#00c9ff,#92fe9d);
+padding:15px 40px;
+}
+
+.logo{
+color:white;
+font-size:24px;
+}
+
+ul{
+list-style:none;
+display:flex;
+}
+
+ul li{
+margin:0 15px;
+}
+
+ul li a{
+text-decoration:none;
+color:white;
+font-size:18px;
+font-weight:bold;
+}
+
+ul li a:hover{
+color:#023e8a;
+}
