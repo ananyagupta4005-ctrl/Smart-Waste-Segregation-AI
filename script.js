@@ -1,39 +1,31 @@
-const URL = "https://teachablemachine.withgoogle.com/models/pFSaUVG0q/";
-
-let model;
-
-async function loadModel() {
-    model = await tmImage.load(URL + "model.json", URL + "metadata.json");
-    console.log("Model Loaded");
-}
-
-loadModel();
-
 async function detectWaste(){
 
-    const file = document.getElementById("imageUpload").files[0];
+const input = document.getElementById("imageUpload");
+const file = input.files.length > 0 ? input.files[0] : null;
 
-    if(!file){
-        document.getElementById("result").innerHTML = "Please upload an image";
-        return;
-    }
+if(!file){
+document.getElementById("result").innerHTML="Please upload an image";
+return;
+}
 
-    const img = new Image();
-    img.src = window.URL.createObjectURL(file);
+const img = new Image();
+img.src = window.URL.createObjectURL(file);
 
-    img.onload = async function(){
+img.onload = async function(){
 
-        const prediction = await model.predict(img);
+const prediction = await model.predict(img);
 
-        let highest = prediction[0];
+let highest = prediction[0];
 
-        for(let i = 1; i < prediction.length; i++){
-            if(prediction[i].probability > highest.probability){
-                highest = prediction[i];
-            }
-        }
+for(let i=1;i<prediction.length;i++){
+if(prediction[i].probability > highest.probability){
+highest = prediction[i];
+}
+}
 
-        document.getElementById("result").innerHTML =
-        "Detected Waste: " + highest.className;
-    }
+document.getElementById("result").innerHTML =
+"Detected Waste: " + highest.className;
+
+};
+
 }
