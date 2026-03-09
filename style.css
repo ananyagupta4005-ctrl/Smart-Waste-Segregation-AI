@@ -55,19 +55,13 @@ font-size:24px;
 ul{
 list-style:none;
 display:flex;
+margin:0;
+padding:0;
 }
 
 ul li{
 margin:0 15px;
 }
-
-ul li a{
-text-decoration:none;
-color:white;
-font-size:18px;
-font-weight:bold;
-}
-
 ul li a:hover{
 color:#023e8a;
 }
