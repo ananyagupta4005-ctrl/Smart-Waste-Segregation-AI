@@ -1,7 +1,8 @@
 body{
 margin:0;
 font-family:Arial;
-background:linear-gradient(120deg,#89f7fe,#66a6ff);
+background:#0f172a;
+color:white;
 }
 
 .navbar{
@@ -9,11 +10,11 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 padding:15px 50px;
-background:#0f172a;
+background:#020617;
 }
 
 .logo{
-color:white;
+color:#38bdf8;
 font-size:24px;
 }
 
@@ -45,13 +46,13 @@ color:white;
 
 p{
 font-size:18px;
-color:white;
+color:#cbd5f5;
 }
 
 button{
 padding:12px 25px;
 border:none;
-background:#ff6b6b;
+background:#3b82f6;
 color:white;
 font-size:16px;
 border-radius:8px;
@@ -59,5 +60,5 @@ cursor:pointer;
 }
 
 button:hover{
-background:#e63946;
+background:#2563eb;
 }
