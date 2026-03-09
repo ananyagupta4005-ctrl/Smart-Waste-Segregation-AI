@@ -1,50 +1,15 @@
 body{
-font-family: Arial;
 margin:0;
+font-family:Arial;
 background:linear-gradient(120deg,#89f7fe,#66a6ff);
 }
 
 .navbar{
-background:#023e8a;
-padding:15px;
-text-align:center;
-}
-
-.navbar a{
-color:white;
-margin:15px;
-text-decoration:none;
-font-size:18px;
-}
-
-.container{
-text-align:center;
-margin-top:80px;
-}
-
-h1{
-color:#023e8a;
-}
-
-button{
-padding:12px 25px;
-background:#ff6b6b;
-color:white;
-border:none;
-border-radius:8px;
-font-size:16px;
-cursor:pointer;
-}
-
-button:hover{
-background:#e63946;
-}
-.navbar{
 display:flex;
 justify-content:space-between;
 align-items:center;
-background:linear-gradient(90deg,#00c9ff,#92fe9d);
-padding:15px 40px;
+padding:15px 50px;
+background:#0f172a;
 }
 
 .logo{
@@ -55,13 +20,44 @@ font-size:24px;
 ul{
 list-style:none;
 display:flex;
-margin:0;
-padding:0;
+gap:25px;
 }
 
-ul li{
-margin:0 15px;
+ul li a{
+text-decoration:none;
+color:white;
+font-size:17px;
 }
+
 ul li a:hover{
-color:#023e8a;
+color:#38bdf8;
+}
+
+.hero{
+text-align:center;
+margin-top:120px;
+}
+
+h1{
+font-size:42px;
+color:white;
+}
+
+p{
+font-size:18px;
+color:white;
+}
+
+button{
+padding:12px 25px;
+border:none;
+background:#ff6b6b;
+color:white;
+font-size:16px;
+border-radius:8px;
+cursor:pointer;
+}
+
+button:hover{
+background:#e63946;
 }
