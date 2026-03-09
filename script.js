@@ -4,21 +4,22 @@ let model;
 
 async function loadModel(){
 model = await tmImage.load(URL + "model.json", URL + "metadata.json");
+console.log("Model Loaded");
 }
 
 loadModel();
 
 async function detectWaste(){
 
-const imageUpload = document.getElementById("imageUpload").files[0];
+const file = document.getElementById("imageUpload").files[0];
 
-if(!imageUpload){
+if(!file){
 document.getElementById("result").innerHTML="Please upload an image first";
 return;
 }
 
 const img = new Image();
-img.src = window.URL.createObjectURL(imageUpload);
+img.src = URL.createObjectURL(file);
 
 img.onload = async function(){
 
