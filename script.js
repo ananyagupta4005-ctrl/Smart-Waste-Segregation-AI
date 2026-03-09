@@ -3,8 +3,8 @@ const URL = "https://teachablemachine.withgoogle.com/models/pFSaUVG0q/";
 let model;
 
 async function loadModel() {
-  model = await tmImage.load(URL + "model.json", URL + "metadata.json");
-  console.log("Model Loaded");
+    model = await tmImage.load(URL + "model.json", URL + "metadata.json");
+    console.log("Model Loaded");
 }
 
 loadModel();
@@ -14,7 +14,7 @@ async function detectWaste(){
     const file = document.getElementById("imageUpload").files[0];
 
     if(!file){
-        document.getElementById("result").innerHTML="Please upload an image";
+        document.getElementById("result").innerHTML = "Please upload an image";
         return;
     }
 
@@ -27,7 +27,7 @@ async function detectWaste(){
 
         let highest = prediction[0];
 
-        for(let i=1;i<prediction.length;i++){
+        for(let i = 1; i < prediction.length; i++){
             if(prediction[i].probability > highest.probability){
                 highest = prediction[i];
             }
@@ -35,6 +35,5 @@ async function detectWaste(){
 
         document.getElementById("result").innerHTML =
         "Detected Waste: " + highest.className;
-
     }
 }
