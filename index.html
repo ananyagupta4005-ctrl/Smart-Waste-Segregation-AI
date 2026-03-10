@@ -1,33 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<title>Smart Waste Segregation AI</title>
+<title>Smart Waste AI</title>
 <link rel="stylesheet" href="style.css">
-
-<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
-<script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image"></script>
-
 </head>
 
 <body>
 
-<div class="container">
+<nav>
+<h2>Smart Waste AI</h2>
 
-<h1>Smart Waste Segregation System</h1>
-<p>Upload waste image to detect category</p>
-
-<input type="file" id="imageUpload" accept="image/*">
-
-<img id="preview">
-
-<button onclick="detectWaste()">Detect Waste</button>
-
-<h2 id="result"></h2>
-
+<div class="nav-links">
+<a href="index.html">Home</a>
+<a href="detect.html">Detect Waste</a>
+<a href="about.html">About</a>
 </div>
 
-<script src="script.js"></script>
+</nav>
+
+<div class="hero">
+
+<h1>AI Based Smart Waste Segregation</h1>
+
+<p>
+Upload waste images and our AI will classify them into
+Plastic, Food, Metal or Paper waste.
+</p>
+
+<a href="detect.html">
+<button>Start Detection</button>
+</a>
+
+</div>
 
 </body>
 </html>
