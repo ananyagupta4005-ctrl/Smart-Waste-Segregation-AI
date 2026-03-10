@@ -3,8 +3,7 @@ const URL = "https://teachablemachine.withgoogle.com/models/pFSaUVG0q/";
 let model;
 
 async function loadModel(){
-    model = await tmImage.load(URL + "model.json", URL + "metadata.json");
-    console.log("Model Loaded");
+model = await tmImage.load(URL + "model.json", URL + "metadata.json");
 }
 
 loadModel();
