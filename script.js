@@ -1,15 +1,27 @@
-async function detectWaste(){
+const URL = "https://teachablemachine.withgoogle.com/models/pFSaUVG0q/";
+
+let model;
+
+async function loadModel() {
+model = await tmImage.load(URL + "model.json", URL + "metadata.json");
+console.log("Model loaded");
+}
+
+loadModel();
+
+async function detectWaste() {
 
 const input = document.getElementById("imageUpload");
-const file = input.files.length > 0 ? input.files[0] : null;
 
-if(!file){
-document.getElementById("result").innerHTML="Please upload an image";
+if(input.files.length === 0){
+document.getElementById("result").innerHTML = "Please upload an image";
 return;
 }
 
-const img = new Image();
-img.src = window.URL.createObjectURL(file);
+const file = input.files[0];
+
+const img = document.createElement("img");
+img.src = URL.createObjectURL(file);
 
 img.onload = async function(){
 
