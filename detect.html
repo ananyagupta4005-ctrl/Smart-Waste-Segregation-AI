@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
 <title>Detect Waste</title>
 <link rel="stylesheet" href="style.css">
@@ -9,32 +8,30 @@
 <body>
 
 <div class="navbar">
-
 <h2 class="logo">♻ SmartWaste AI</h2>
-
 <ul>
 <li><a href="index.html">Home</a></li>
 <li><a href="detect.html">Detect</a></li>
 <li><a href="about.html">About</a></li>
 <li><a href="impact.html">Impact</a></li>
 </ul>
-
 </div>
 
 <div class="hero">
 
 <h1>Upload Waste Image</h1>
-
 <p>Upload an image of waste and detect its category.</p>
 
-<input type="file" id="imageUpload">
+<input type="file" id="imageUpload" accept="image/*">
 
+<br><br>
 
 <button onclick="detectWaste()">Detect Waste</button>
 
 <h2 id="result"></h2>
 
 </div>
+
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.10.0"></script>
 <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8"></script>
 <script src="script.js"></script>
