@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Waste Detection</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+<script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image"></script>
+
+</head>
+
+<body>
+
+<nav>
+
+<h2>Smart Waste AI</h2>
+
+<div class="nav-links">
+<a href="index.html">Home</a>
+<a href="detect.html">Detect Waste</a>
+<a href="about.html">About</a>
+</div>
+
+</nav>
+
+<div class="container">
+
+<h1>Waste Detection</h1>
+
+<input type="file" id="imageUpload">
+
+<img id="preview">
+
+<button onclick="detectWaste()">Detect</button>
+
+<h2 id="result"></h2>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
