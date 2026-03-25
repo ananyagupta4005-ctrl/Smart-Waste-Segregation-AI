@@ -135,27 +135,3 @@ list.appendChild(li);
 });
 
 }
-let fillLevel = 0;
-
-function updateBin() {
-  fillLevel += Math.floor(Math.random() * 20);
-
-  if (fillLevel >= 100) {
-    document.getElementById("bin").innerText = "🚨 Bin Full!";
-  } else {
-    document.getElementById("bin").innerText = "Bin Level: " + fillLevel + "%";
-  }
-}
-
-function showWasteInfo(type) {
-  if (type === "plastic") {
-    document.getElementById("alert").innerText = "⚠️ Put in Plastic Bin";
-    document.getElementById("recycle").innerText = "Reuse as bottle planter";
-  } else if (type === "organic") {
-    document.getElementById("alert").innerText = "✅ Correct Bin";
-    document.getElementById("recycle").innerText = "Convert to compost";
-  } else {
-    document.getElementById("alert").innerText = "⚠️ Check Metal Waste";
-    document.getElementById("recycle").innerText = "Recycle at scrap center";
-  }
-}
