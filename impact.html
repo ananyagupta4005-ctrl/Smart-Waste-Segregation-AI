@@ -9,12 +9,27 @@
 
 <div class="hero">
 
-<h1>Environmental Impact</h1>
+<h1>Impact Dashboard 📊</h1>
 
-<p>
-This system helps people correctly segregate waste and supports
-sustainable waste management. It reduces landfill waste and improves recycling.
-</p>
+<h2>Total Waste Collected: <span id="total">25</span></h2>
+
+<h3>Plastic: 10</h3>
+<h3>Organic: 8</h3>
+<h3>Metal: 7</h3>
+
+<hr>
+
+<h2>♻️ Recycling Suggestions</h2>
+<p>Plastic → Bottle planter bana sakte ho</p>
+<p>Organic → Compost bana sakte ho</p>
+<p>Metal → Scrap center me recycle karo</p>
+
+<hr>
+
+<h2>🚨 Bin Status</h2>
+<p id="bin">Bin Level: 60%</p>
+
+<button onclick="updateBin()">Check Bin Status</button>
 
 </div>
 
