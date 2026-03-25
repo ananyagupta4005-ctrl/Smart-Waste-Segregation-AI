@@ -1,45 +1,54 @@
 <!DOCTYPE html>
 <html>
 <head>
-
-<title>Waste Detection</title>
-
+<title>Detect Waste</title>
 <link rel="stylesheet" href="style.css">
-
-<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
-<script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image"></script>
-
 </head>
 
 <body>
+ 
 
-<nav>
+<div class="navbar">
 
-<h2>Smart Waste AI</h2>
+<div class="logo">♻ SmartWaste AI</div>
 
-<div class="nav-links">
-<a href="index.html">Home</a>
-<a href="detect.html">Detect Waste</a>
-<a href="about.html">About</a>
+<ul class="nav-links">
+
+<li><a href="index.html">Home</a></li>
+<li><a href="detect.html">Detect</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="impact.html">Impact</a></li>
+<li><a href="leaderboard.html">🏆 Leaderboard</a></li>
+
+</ul>
+
 </div>
 
-</nav>
+<div class="hero">
 
-<div class="container">
+<h1>Upload Waste Image</h1>
+  <h3>Player: <span id="playerName"></span></h3>
 
-<h1>Waste Detection</h1>
+  <h3>Score: <span id="score">0</span></h3>
+  
+ 
+  <button onclick="resetGame()">Reset Game</button>
 
 <input type="file" id="imageUpload">
+  <img id="preview" width="200" style="margin-top:20px;">
 
-<img id="preview">
+<br><br>
 
-<button onclick="detectWaste()">Detect</button>
+<button onclick="detectWaste()">Detect Waste</button>
 
 <h2 id="result"></h2>
 
 </div>
 
 <script src="script.js"></script>
+ <footer>
+<p>EcoSetu © 2026 | Smart Waste Segregation System</p>
+</footer>
 
 </body>
 </html>
