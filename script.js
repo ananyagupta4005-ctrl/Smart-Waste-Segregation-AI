@@ -135,3 +135,14 @@ list.appendChild(li);
 });
 
 }
+let fillLevel = 60;
+
+function updateBin() {
+  fillLevel += Math.floor(Math.random() * 15);
+
+  if (fillLevel >= 100) {
+    document.getElementById("bin").innerText = "🚨 Bin Full!";
+  } else {
+    document.getElementById("bin").innerText = "Bin Level: " + fillLevel + "%";
+  }
+}
