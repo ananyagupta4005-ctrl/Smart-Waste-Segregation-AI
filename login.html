@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login - Smart Waste AI</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="hero">
+
+<h1>♻ Smart Waste Segregation Game</h1>
+
+<h2>Enter Your Name</h2>
+
+<input type="text" id="username" placeholder="Your Name">
+
+<br><br>
+
+<button onclick="startGame()">Start Game</button>
+
+</div>
+
+<script>
+
+function startGame(){
+
+const name = document.getElementById("username").value;
+
+if(name === ""){
+alert("Please enter your name");
+return;
+}
+
+localStorage.setItem("playerName", name);
+
+window.location.href = "detect.html";
+
+}
+
+</script>
+
+</body>
+</html>
